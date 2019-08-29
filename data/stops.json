@@ -1,0 +1,1156 @@
+{
+  "179": [
+    {
+      "name": "Bus stop at Blk 643 (22459)",
+      "lat": 1.339125,
+      "lng": 103.695474,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop outside Innovation Centre, Canteen B & Chinese Heritage Centre (27251)",
+      "lat": 1.34168820906,
+      "lng": 103.6844647729,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 658C (22511)",
+      "lat": 1.337462,
+      "lng": 103.700007,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 651A (22521)",
+      "lat": 1.337472,
+      "lng": 103.697449,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 840 (27329)",
+      "lat": 1.344022,
+      "lng": 103.69184,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop outside School of Civil & Environmental Engineering (N1) (27221)",
+      "lat": 1.3460441531,
+      "lng": 103.67873521133,
+      "campus": [
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 663E (22509)",
+      "lat": 1.33794,
+      "lng": 103.7029,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop at Boon Lay Interchange (22009)",
+      "lat": 1.34001593892,
+      "lng": 103.70513885819,
+      "campus": [],
+      "sls": [
+        "179",
+        "179A",
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside Canteen 2 (27311)",
+      "lat": 1.348945,
+      "lng": 103.685633,
+      "campus": [
+        "CL-R",
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 978 (27301)",
+      "lat": 1.340619,
+      "lng": 103.694404,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 4 (27261)",
+      "lat": 1.34347560511,
+      "lng": 103.68652304652,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop opp Hall 6 / Outside Hall 2 (27291)",
+      "lat": 1.34785150492,
+      "lng": 103.68659780197,
+      "campus": [],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 7 (27241)",
+      "lat": 1.34010671103,
+      "lng": 103.68211700007,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop opp Blk 643 (22451)",
+      "lat": 1.33833,
+      "lng": 103.695626,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 705 (27309)",
+      "lat": 1.340925,
+      "lng": 103.69434,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 608 (22519)",
+      "lat": 1.337722,
+      "lng": 103.699952,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 662A (22501)",
+      "lat": 1.337534,
+      "lng": 103.702303,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop outside Canteen A & Lee Wee Nam Library / Opp NIE (27211)",
+      "lat": 1.34796736886,
+      "lng": 103.68075417486,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside School of Art, Design and Media (27061)",
+      "lat": 1.34989096192,
+      "lng": 103.68377964689,
+      "campus": [
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 1 (27281)",
+      "lat": 1.34583385639,
+      "lng": 103.68796705442,
+      "campus": [
+        "CL-R",
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 948 (27321)",
+      "lat": 1.343987,
+      "lng": 103.691666,
+      "campus": [],
+      "sls": [
+        "179"
+      ]
+    },
+    {
+      "name": "Bus stop outside Wee Kim Wee School of Communications & Information (S1) (27231)",
+      "lat": 1.34202747725,
+      "lng": 103.6795592632,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 649A (22529)",
+      "lat": 1.337689,
+      "lng": 103.697287,
+      "campus": [
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179"
+      ]
+    }
+  ],
+  "199": [
+    {
+      "name": "Bus stop at PUB Sub station (27181)",
+      "lat": 1.35570551136,
+      "lng": 103.68836277477,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop opp SCDF Jalan Bahar Camp (27099)",
+      "lat": 1.350206,
+      "lng": 103.703614,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 683A (22489)",
+      "lat": 1.34235190388,
+      "lng": 103.70520013232,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop opp School of Art, Design and Media / Beside Hall 8 (27069)",
+      "lat": 1.35020083515,
+      "lng": 103.68420271357,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside NIE Carpark 'Y' (27041)",
+      "lat": 1.35062844851,
+      "lng": 103.67859380655,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 12 & 13 / Near Hall 3 & 16 (27031)",
+      "lat": 1.35188203978,
+      "lng": 103.68049715913,
+      "campus": [
+        "CL-R"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop opp Westville (27109)",
+      "lat": 1.353154,
+      "lng": 103.700864,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop at Boon Lay Interchange (22009)",
+      "lat": 1.34001593892,
+      "lng": 103.70513885819,
+      "campus": [],
+      "sls": [
+        "179",
+        "179A",
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop before Nanyang Avenue (27121)",
+      "lat": 1.356852,
+      "lng": 103.695251,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop at Nanyang Crescent Halls (27071)",
+      "lat": 1.35484797944,
+      "lng": 103.68393730268,
+      "campus": [
+        "CL-R"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside NIE Library (27051)",
+      "lat": 1.34803280154,
+      "lng": 103.67690729143,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop opp Nanyang Avenue (27129)",
+      "lat": 1.35728,
+      "lng": 103.69512,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop before Jalan Bahar (27169)",
+      "lat": 1.35688780969,
+      "lng": 103.69429861937,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside Graduate Hall / Hall 11 (27011)",
+      "lat": 1.35606749591,
+      "lng": 103.68618500545,
+      "campus": [
+        "CL-R"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 263 (21379)",
+      "lat": 1.345217,
+      "lng": 103.706501,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop at Westville (27101)",
+      "lat": 1.352667,
+      "lng": 103.701166,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop opp Lee Wee Nam Library & Canteen A / Outside NIE (27219)",
+      "lat": 1.34798702914,
+      "lng": 103.68041554371,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop before Lorong Danau (27171)",
+      "lat": 1.35603252046,
+      "lng": 103.69196165659,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop opp Nanyang Heights / Beside Hall 9 (27209)",
+      "lat": 1.35151625246,
+      "lng": 103.68567391257,
+      "campus": [
+        "CL-R"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop after Lorong Danau (27179)",
+      "lat": 1.35608076659,
+      "lng": 103.69201764932,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 680C (21371)",
+      "lat": 1.345283,
+      "lng": 103.70608,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 10 & 11 (27199)",
+      "lat": 1.35447399091,
+      "lng": 103.68677300909,
+      "campus": [
+        "CL-R"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 691A Multi Storey Car Park (22481)",
+      "lat": 1.34250854312,
+      "lng": 103.70544386768,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop opp PUB Sub station (27189)",
+      "lat": 1.35648723341,
+      "lng": 103.68911375114,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 14 & 15 (27021)",
+      "lat": 1.35329850136,
+      "lng": 103.68189549864,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop at Civil Defence School (27091)",
+      "lat": 1.349134,
+      "lng": 103.703928,
+      "campus": [],
+      "sls": [
+        "199"
+      ]
+    }
+  ],
+  "CL-R": [
+    {
+      "name": "Bus stop outside Innovation Centre, Canteen B & Chinese Heritage Centre (27251)",
+      "lat": 1.34168820906,
+      "lng": 103.6844647729,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 12 & 13 / Near Hall 3 & 16 (27031)",
+      "lat": 1.35188203978,
+      "lng": 103.68049715913,
+      "campus": [
+        "CL-R"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside Canteen 2 (27311)",
+      "lat": 1.348945,
+      "lng": 103.685633,
+      "campus": [
+        "CL-R",
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop at Nanyang Crescent Halls (27071)",
+      "lat": 1.35484797944,
+      "lng": 103.68393730268,
+      "campus": [
+        "CL-R"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 4 (27261)",
+      "lat": 1.34347560511,
+      "lng": 103.68652304652,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 7 (27241)",
+      "lat": 1.34010671103,
+      "lng": 103.68211700007,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Graduate Hall / Hall 11 (27011)",
+      "lat": 1.35606749591,
+      "lng": 103.68618500545,
+      "campus": [
+        "CL-R"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop opp Nanyang Heights / Beside Hall 9 (27209)",
+      "lat": 1.35151625246,
+      "lng": 103.68567391257,
+      "campus": [
+        "CL-R"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside Canteen A & Lee Wee Nam Library / Opp NIE (27211)",
+      "lat": 1.34796736886,
+      "lng": 103.68075417486,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 10 & 11 (27199)",
+      "lat": 1.35447399091,
+      "lng": 103.68677300909,
+      "campus": [
+        "CL-R"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 1 (27281)",
+      "lat": 1.34583385639,
+      "lng": 103.68796705442,
+      "campus": [
+        "CL-R",
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside School of Biological Sciences (63741)",
+      "lat": 1.34450373154,
+      "lng": 103.67890251187,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop outside Wee Kim Wee School of Communications & Information (S1) (27231)",
+      "lat": 1.34202747725,
+      "lng": 103.6795592632,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    }
+  ],
+  "CWR": [
+    {
+      "name": "Bus stop outside Innovation Centre, Canteen B & Chinese Heritage Centre (27251)",
+      "lat": 1.34168820906,
+      "lng": 103.6844647729,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside School of Civil & Environmental Engineering (N1) (27221)",
+      "lat": 1.3460441531,
+      "lng": 103.67873521133,
+      "campus": [
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Canteen 2 (27311)",
+      "lat": 1.348945,
+      "lng": 103.685633,
+      "campus": [
+        "CL-R",
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 4 (27261)",
+      "lat": 1.34347560511,
+      "lng": 103.68652304652,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 7 (27241)",
+      "lat": 1.34010671103,
+      "lng": 103.68211700007,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Canteen A & Lee Wee Nam Library / Opp NIE (27211)",
+      "lat": 1.34796736886,
+      "lng": 103.68075417486,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 5 (63747)",
+      "lat": 1.34429551152,
+      "lng": 103.68773398854,
+      "campus": [
+        "CWR"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop at Administration Building (63737)",
+      "lat": 1.34486267309,
+      "lng": 103.68175057385,
+      "campus": [
+        "CR",
+        "CWR"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop outside School of Art, Design and Media (27061)",
+      "lat": 1.34989096192,
+      "lng": 103.68377964689,
+      "campus": [
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop at Student Services Centre (63735)",
+      "lat": 1.34576705873,
+      "lng": 103.68304751195,
+      "campus": [
+        "CR",
+        "CWR"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop outside Hall 1 (27281)",
+      "lat": 1.34583385639,
+      "lng": 103.68796705442,
+      "campus": [
+        "CL-R",
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside School of Biological Sciences (63741)",
+      "lat": 1.34450373154,
+      "lng": 103.67890251187,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop outside Wee Kim Wee School of Communications & Information (S1) (27231)",
+      "lat": 1.34202747725,
+      "lng": 103.6795592632,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 649A (22529)",
+      "lat": 1.337689,
+      "lng": 103.697287,
+      "campus": [
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179"
+      ]
+    }
+  ],
+  "179A": [
+    {
+      "name": "Bus stop outside Innovation Centre, Canteen B & Chinese Heritage Centre (27251)",
+      "lat": 1.34168820906,
+      "lng": 103.6844647729,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside School of Civil & Environmental Engineering (N1) (27221)",
+      "lat": 1.3460441531,
+      "lng": 103.67873521133,
+      "campus": [
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop at Boon Lay Interchange (22009)",
+      "lat": 1.34001593892,
+      "lng": 103.70513885819,
+      "campus": [],
+      "sls": [
+        "179",
+        "179A",
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop outside Canteen 2 (27311)",
+      "lat": 1.348945,
+      "lng": 103.685633,
+      "campus": [
+        "CL-R",
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 4 (27261)",
+      "lat": 1.34347560511,
+      "lng": 103.68652304652,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop opp Hall 6 / Outside Hall 2 (27291)",
+      "lat": 1.34785150492,
+      "lng": 103.68659780197,
+      "campus": [],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 7 (27241)",
+      "lat": 1.34010671103,
+      "lng": 103.68211700007,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Canteen A & Lee Wee Nam Library / Opp NIE (27211)",
+      "lat": 1.34796736886,
+      "lng": 103.68075417486,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside School of Art, Design and Media (27061)",
+      "lat": 1.34989096192,
+      "lng": 103.68377964689,
+      "campus": [
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Hall 1 (27281)",
+      "lat": 1.34583385639,
+      "lng": 103.68796705442,
+      "campus": [
+        "CL-R",
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop outside Wee Kim Wee School of Communications & Information (S1) (27231)",
+      "lat": 1.34202747725,
+      "lng": 103.6795592632,
+      "campus": [
+        "CL-R",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    }
+  ],
+  "CL-B": [
+    {
+      "name": "Bus stop opp Hall 10 & 11 (63721)",
+      "lat": 1.35473989145,
+      "lng": 103.6872052263,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop opp Hall 3 & 16 (63713)",
+      "lat": 1.35046776711,
+      "lng": 103.68048121745,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop opp Nanyang Crescent Halls (63718)",
+      "lat": 1.35478616442,
+      "lng": 103.68365674132,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop outside Nanyang Heights / Opp Hall 8 & 9 (63723)",
+      "lat": 1.35099483136,
+      "lng": 103.68587899628,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop opp Hall 14 & 15 (63717)",
+      "lat": 1.35317547194,
+      "lng": 103.68158870253,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop opp Lee Wee Nam Library & Canteen A / Outside NIE (27219)",
+      "lat": 1.34798702914,
+      "lng": 103.68041554371,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": [
+        "199"
+      ]
+    },
+    {
+      "name": "Bus stop opp Innovation Centre & Canteen B / Near Chinese Heritage Centre (63701)",
+      "lat": 1.34164915514,
+      "lng": 103.68461595644,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop opp Hall 5 (63731)",
+      "lat": 1.34373044625,
+      "lng": 103.68710520975,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop opp School of Civil & Environmental Engineering (N1) (63711)",
+      "lat": 1.34574620867,
+      "lng": 103.67851914187,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop opp Wee Kim Wee School of Communications & Information (S1) (63707)",
+      "lat": 1.34190992862,
+      "lng": 103.67935370136,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop outside Hall 6 / Opp Hall 2 (63727)",
+      "lat": 1.34745665129,
+      "lng": 103.6867429993,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop opp School of Physical & Mathematical Sciences (63703)",
+      "lat": 1.34191920957,
+      "lng": 103.68107779184,
+      "campus": [
+        "CL-B"
+      ],
+      "sls": []
+    }
+  ],
+  "CR": [
+    {
+      "name": "Bus stop outside Canteen 2 (27311)",
+      "lat": 1.348945,
+      "lng": 103.685633,
+      "campus": [
+        "CL-R",
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop opp Canteen 2 (63725)",
+      "lat": 1.34911060394,
+      "lng": 103.68579074282,
+      "campus": [
+        "CR"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop at Administration Building (63737)",
+      "lat": 1.34486267309,
+      "lng": 103.68175057385,
+      "campus": [
+        "CR",
+        "CWR"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop at Student Services Centre (63735)",
+      "lat": 1.34576705873,
+      "lng": 103.68304751195,
+      "campus": [
+        "CR",
+        "CWR"
+      ],
+      "sls": []
+    },
+    {
+      "name": "Bus stop outside Hall 1 (27281)",
+      "lat": 1.34583385639,
+      "lng": 103.68796705442,
+      "campus": [
+        "CL-R",
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179",
+        "179A"
+      ]
+    },
+    {
+      "name": "Bus stop at Blk 649A (22529)",
+      "lat": 1.337689,
+      "lng": 103.697287,
+      "campus": [
+        "CR",
+        "CWR"
+      ],
+      "sls": [
+        "179"
+      ]
+    }
+  ]
+}
