@@ -28,6 +28,13 @@ const busMapping = {
   'CWR': "https://gothere.sg/static/ntu/v3/4/{z}/{x}/{y}.png",
 }
 
+const busProgressMapping = {
+  'CL-B': 44479,
+  'CL-R': 44478,
+  'CR': 44480,
+  'CWR': 44481
+}
+
 const TargetMarker = ({ location }) => {
   const { name, lat, lng } = location || {}
   if (!name || !lat || !lng) return null
@@ -63,13 +70,88 @@ const TargetMarker = ({ location }) => {
   )
 }
 
+const ProgressMarkers = ({ url }) => {
+  const [data, setData] = useState([])
+  const [updated, setLastUpdated] = useState(Date.now())
+
+  useEffect(() => {
+    if (!url) return
+
+    let fetchId = null
+    let cancelled = false
+    const delay = 1000
+
+    const fetchCallback = async () => {
+      clearTimeout(fetchId)
+      
+      let data = null
+      try {
+        data = await (fetch(url).then(a => a.json()))
+      } catch (err) {
+        console.log(err)
+      }
+
+      if (!cancelled) {
+        setData(((data && data.vehicles) || []))
+        setLastUpdated(Date.now())
+  
+        fetchId = setTimeout(fetchCallback, delay)
+      }
+    }
+
+    // execute the callback
+    fetchCallback()
+
+    return () => {
+      cancelled = true
+      clearTimeout(fetchId)
+    }
+  }, [url])
+
+
+  if (!url) return null
+
+  return (
+    <Fragment>
+      <MapboxGL.ShapeSource
+        id={`ntumap-${url}-progresssrc`}
+        shape={{
+          type: 'FeatureCollection',
+          features: data.map(({ registration_code, lat, lon }) => ({
+            type: 'Feature',
+            properties: {
+              icon: 'example',
+              name: registration_code,
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [lon, lat].map(i => Number.parseFloat(i)),
+            }
+          }))
+        }}
+      >
+        <MapboxGL.SymbolLayer
+          id={`ntumap-${url}-progress-pin`}
+          style={{
+            iconImage: 'progress',
+            iconSize: 1,
+            iconAllowOverlap: true,
+            iconIgnorePlacement: true,
+          }}
+        />
+      </MapboxGL.ShapeSource>
+    </Fragment>
+  )
+}
+
 const BusRouteMarkers = ({ route }) => {
   if (!route) return null
 
   const url = busMapping[route.value]
   const stations = stops[route.value]
+  const progressId = busProgressMapping[route.value]
   
-  if (!url || !stations) return null
+  if (!url || !stations || !progressId) return null
   return (
     <Fragment key={route.value}>
       <MapboxGL.RasterSource id={`ntumap-${route.value}`} key={route.value} url={url} tileSize={256}>
@@ -103,6 +185,8 @@ const BusRouteMarkers = ({ route }) => {
           }}
         />
       </MapboxGL.ShapeSource>
+
+      <ProgressMarkers url={`http://baseride.com/routes/apigeo/routevariantvehicle/${progressId}/?format=json`} />
     </Fragment>
   )
 }
@@ -110,14 +194,16 @@ const BusRouteMarkers = ({ route }) => {
 export default ({ location, route }) => {
   const [mapReady, setMapReady] = useState(false)
   const [pinIcon, setPinIcon] = useState(null)
-  const [busIcons, setBusIcons] = useState({})
+  const [stationIcons, setStationIcons] = useState({})
+  const [progressIcon, setProgressIcon] = useState(null)
 
   useEffect(() => {
     (async () => {
       await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION)
       setPinIcon(await Icon.getImageSource('location-on', 32, 'red'))
+      setProgressIcon(await Icon.getImageSource('location-on', 14, 'orange'))
 
-      setBusIcons(
+      setStationIcons(
         (await Promise.all(LINES.map(({ color }) => Icon.getImageSource('location-on', 32, color))))
         .reduce((res, img, index) => {
           res[LINES[index].value] = img
@@ -138,7 +224,8 @@ export default ({ location, route }) => {
             <MapboxGL.Images
               images={{
                 pin: pinIcon,
-                ...busIcons,
+                progress: progressIcon,
+                ...stationIcons,
               }}
             />
             <MapboxGL.Camera

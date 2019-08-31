@@ -13,8 +13,8 @@ const App = () => {
   return (
     <Fragment>
       <NTUMap location={location} route={route} />
-      <SearchBar onLocationSelect={setLocation} />
       <PlaceSheet location={location} onClose={onSheetClose} route={route} setRoute={setRoute} />
+      <SearchBar onLocationSelect={setLocation} />
     </Fragment>
   )
 }
