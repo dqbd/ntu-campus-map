@@ -8,6 +8,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@mapbox/sphericalmercator": "^1.1.0",
     "@react-native-mapbox-gl/maps": "^7.0.1",
     "react": "16.8.6",
     "react-native": "0.60.5",
@@ -17,6 +18,7 @@
     "react-native-render-html": "https://github.com/archriss/react-native-render-html#baac650c895f69f8ee44acc1294d8438c69dc5a7",
     "react-native-svg": "^9.7.0",
     "react-native-vector-icons": "^6.6.0",
+    "react-native-view-shot": "^3.0.2",
     "reanimated-bottom-sheet": "^1.0.0-alpha.13"
   },
   "devDependencies": {
