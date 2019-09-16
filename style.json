@@ -1,0 +1,32 @@
+{
+  "version": 8,
+  "name": "NTU",
+  "sources": {
+    "map": {
+      "type": "raster",
+      "tiles": [
+        "https://gothere.sg/tiles/v14c/{x}/{y}/{z}",
+      ],
+      "tileSize": 256,
+      "minzoom": 1,
+      "maxzoom": 18
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#f2efea"
+      }
+    },
+    {
+      "id": "map",
+      "type": "raster",
+      "source": "map",
+      "paint": {
+        "raster-fade-duration": 100
+      }
+    }
+  ]
+}
