@@ -1,32 +1,33 @@
 {
   "version": 8,
-  "name": "NTU",
-  "sources": {
-    "map": {
-      "type": "raster",
-      "tiles": [
-        "https://gothere.sg/tiles/v14c/{x}/{y}/{z}",
-      ],
-      "tileSize": 256,
-      "minzoom": 1,
-      "maxzoom": 18
-    }
-  },
-  "layers": [
-    {
-      "id": "background",
-      "type": "background",
-      "paint": {
-        "background-color": "#f2efea"
-      }
+  "name": "Blank",
+  "metadata": {
+    "mapbox:autocomposite": true,
+    "mapbox:type": "template",
+    "mapbox:sdk-support": {
+      "js": "0.54.0",
+      "android": "7.4.0",
+      "ios": "4.11.0"
     },
-    {
-      "id": "map",
-      "type": "raster",
-      "source": "map",
-      "paint": {
-        "raster-fade-duration": 100
-      }
+    "mapbox:groups": {}
+  },
+  "center": [0, 2.842170943040401e-14],
+  "zoom": 0.8657332503937678,
+  "bearing": 0,
+  "pitch": 0,
+  "sources": {},
+  "sprite": "mapbox://sprites/delold/ck0lw28rs0xo81clkrgy1o8ih/draft",
+  "glyphs": "mapbox://fonts/delold/{fontstack}/{range}.pbf",
+  "layers": [{
+    "id": "background",
+    "type": "background",
+    "paint": {
+      "background-color": "rgb(243, 32, 32)"
     }
-  ]
+  }],
+  "created": "2019-09-16T04:08:49.418Z",
+  "id": "ck0lw28rs0xo81clkrgy1o8ih",
+  "modified": "2019-09-16T04:12:54.477Z",
+  "owner": "delold",
+  "visibility": "private"
 }
