@@ -15,7 +15,17 @@
   "zoom": 0.8657332503937678,
   "bearing": 0,
   "pitch": 0,
-  "sources": {},
+  "sources": {
+    "map": {
+      "type": "raster",
+      "tiles": [
+        "https://gothere.sg/tiles/v14c/{x}/{y}/{z}",
+      ],
+      "tileSize": 256,
+      "minzoom": 1,
+      "maxzoom": 18
+    }
+  },
   "sprite": "mapbox://sprites/delold/ck0lw28rs0xo81clkrgy1o8ih/draft",
   "glyphs": "mapbox://fonts/delold/{fontstack}/{range}.pbf",
   "layers": [{
@@ -23,6 +33,13 @@
     "type": "background",
     "paint": {
       "background-color": "rgb(243, 32, 32)"
+    }
+  },{
+    "id": "map",
+    "type": "raster",
+    "source": "map",
+    "paint": {
+      "raster-fade-duration": 100
     }
   }],
   "created": "2019-09-16T04:08:49.418Z",
