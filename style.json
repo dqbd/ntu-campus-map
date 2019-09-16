@@ -16,10 +16,10 @@
   "bearing": 0,
   "pitch": 0,
   "sources": {
-    "map": {
+    "ntu-map": {
       "type": "raster",
       "tiles": [
-        "https://gothere.sg/tiles/v14c/{x}/{y}/{z}",
+        "https://gothere.sg/tiles/v14c/{x}/{y}/{z}"
       ],
       "tileSize": 256,
       "minzoom": 1,
@@ -34,10 +34,10 @@
     "paint": {
       "background-color": "rgb(243, 32, 32)"
     }
-  },{
+  }, {
     "id": "map",
     "type": "raster",
-    "source": "map",
+    "source": "ntu-map",
     "paint": {
       "raster-fade-duration": 100
     }
