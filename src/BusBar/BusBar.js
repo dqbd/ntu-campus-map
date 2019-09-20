@@ -1,8 +1,9 @@
 import React from 'react'
 import Icon from 'react-native-vector-icons/MaterialIcons'
-import { TouchableNativeFeedback, StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import { LINES } from '../../constants'
-
+import { TouchableNativeFeedback } from 'react-native-gesture-handler'
+import Animated from 'react-native-reanimated'
 export const BAR_HEIGHT = 52.6 + 40
 
 const styles = StyleSheet.create({
@@ -13,6 +14,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: BAR_HEIGHT,
   },
+  buttonWrap: {
+    elevation: 5,
+    borderRadius: 100,
+    overflow: 'hidden',
+    marginLeft: 5,
+    marginRight: 5,
+  }
 })
 export default ({ setRoute, route }) => {
   return (
@@ -20,28 +28,29 @@ export default ({ setRoute, route }) => {
       {LINES.map((line, index) => {
         const active = !!(route && route.value === line.value)
         return (
-          <TouchableNativeFeedback
-            key={line.value}
-            onPress={() => setRoute(active ? null : line)}
+          <Animated.View
+            style={styles.buttonWrap}
           >
-            <View
-              style={{
-                padding: 10,
-                borderRadius: 100,
-                backgroundColor: !active ? "#fff" : line.color,
-                elevation: 5,
-                marginRight: index !== LINES.length - 1 ? 10 : 0,
-              }}
+            <TouchableNativeFeedback
+              key={line.value}
+              onPress={() => setRoute(active ? null : line)}
             >
-              <Icon
-                name="directions-bus"
-                size={32}
+              <View
                 style={{
-                  color: active ? '#fff' : line.color,
+                  padding: 10,
+                  backgroundColor: !active ? "#fff" : line.color,
                 }}
-              />
-            </View>
-          </TouchableNativeFeedback>
+              >
+                <Icon
+                  name="directions-bus"
+                  size={32}
+                  style={{
+                    color: active ? '#fff' : line.color,
+                  }}
+                />
+              </View>
+            </TouchableNativeFeedback>
+          </Animated.View>
         )
       })}
     </View>

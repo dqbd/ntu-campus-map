@@ -9,7 +9,8 @@ import { StyleSheet, PermissionsAndroid, ActivityIndicator, View } from 'react-n
 import { TargetMarker } from './TargetMarker'
 import { BusRouteMarkers } from './BusRouteMarkers'
 
-MapboxGL.setAccessToken("pk.eyJ1IjoiZGVsb2xkIiwiYSI6ImNpdDh2bTk3azAwMmIyenFkM2p0b2F4dHkifQ.aeKRzxbIUcSDVromSe-tHg");
+const ACCESS_TOKEN = 'pk.eyJ1IjoiZGVsb2xkIiwiYSI6ImNpdDh2bTk3azAwMmIyenFkM2p0b2F4dHkifQ.aeKRzxbIUcSDVromSe-tHg'
+MapboxGL.setAccessToken(ACCESS_TOKEN);
 
 const styles = StyleSheet.create({
   mapContainer: {
@@ -45,7 +46,12 @@ export default ({ location, route }) => {
       <BusMarkerProvider ref={shotRef} />
       {mapReady ? (
         <View style={styles.mapContainer}>
-          <MapboxGL.MapView style={styles.mapView} compassEnabled={false} minZoomLevel={1}>
+          <MapboxGL.MapView
+            style={styles.mapView}
+            styleURL={encodeURI(`https://raw.githubusercontent.com/delold/ntu-campus-map/f47ee4bcda3472935/style.json`)}
+            compassEnabled={false}
+            minZoomLevel={1}
+          >
             <MapboxGL.Images
               images={{
                 pin: pinIcon,
@@ -59,10 +65,6 @@ export default ({ location, route }) => {
               }}
             />
             
-            <MapboxGL.RasterSource id="gothereRS" url="https://gothere.sg/tiles/v14c/{x}/{y}/{z}" tileSize={256}>
-              <MapboxGL.RasterLayer id="gothereRSL" />
-            </MapboxGL.RasterSource>
-
             <BusRouteMarkers route={route} />
             <TargetMarker location={location} />
               

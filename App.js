@@ -1,4 +1,5 @@
 import React, { useCallback, useState, Fragment } from 'react';
+import { gestureHandlerRootHOC } from 'react-native-gesture-handler'
 
 import SearchBar from './src/SearchBar/SearchBar'
 import PlaceSheet from './src/PlaceSheet/PlaceSheet'
@@ -13,10 +14,10 @@ const App = () => {
   return (
     <Fragment>
       <NTUMap location={location} route={route} />
-      <PlaceSheet location={location} onClose={onSheetClose} route={route} setRoute={setRoute} />
       <SearchBar onLocationSelect={setLocation} />
+      <PlaceSheet location={location} onClose={onSheetClose} route={route} setRoute={setRoute} />
     </Fragment>
   )
 }
 
-export default App;
+export default gestureHandlerRootHOC(App);

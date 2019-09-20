@@ -58,7 +58,6 @@ export const BusRouteMarkers = ({ route }) => {
           }}
         />
       </MapboxGL.ShapeSource>
-
       <ProgressMarkers line={route.value} color={route.color} url={`http://baseride.com/routes/apigeo/routevariantvehicle/${progressId}/?format=json`} />
     </Fragment>
   )

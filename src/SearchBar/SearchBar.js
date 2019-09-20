@@ -5,7 +5,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 
 const styles = StyleSheet.create({
   container: {
-
     display: "flex",
     flexDirection: "column",
     position: 'absolute',
@@ -13,6 +12,7 @@ const styles = StyleSheet.create({
     bottom: 180,
     left: 20,
     right: 20,
+    zIndex: 0,
   },
   searchContainer: {
     borderRadius: 8,
