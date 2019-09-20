@@ -29,6 +29,12 @@
   "sprite": "mapbox://sprites/delold/ck0lw28rs0xo81clkrgy1o8ih/draft",
   "glyphs": "mapbox://fonts/delold/{fontstack}/{range}.pbf",
   "layers": [{
+    "id": "background",
+    "type": "background",
+    "paint": {
+      "background-color": "rgb(240, 240, 240)"
+    }
+  }, {
     "id": "map",
     "type": "raster",
     "source": "ntu-map",
