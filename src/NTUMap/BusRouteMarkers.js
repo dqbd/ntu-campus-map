@@ -27,7 +27,7 @@ export const BusRouteMarkers = ({ route }) => {
   if (!url || !stations || !progressId) return null
   return (
     <Fragment key={route.value}>
-      <MapboxGL.RasterSource id={`ntumap-${route.value}`} key={route.value} url={url} tileSize={256}>
+      <MapboxGL.RasterSource id={`ntumap-${route.value}`} key={route.value} url={url} tileSize={128}>
         <MapboxGL.RasterLayer id={`ntumap-${route.value}-layer`} style={{ rasterOpacity: 1 }} />
       </MapboxGL.RasterSource>
       <MapboxGL.ShapeSource

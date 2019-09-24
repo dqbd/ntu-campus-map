@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef, Fragment } from 'react'
+import React, { useLayoutEffect, useState, useCallback, useRef, Fragment } from 'react'
 import cheerio from 'react-native-cheerio'
 import BottomSheet from 'reanimated-bottom-sheet'
 import BusBar, { BAR_HEIGHT } from '../BusBar/BusBar'
@@ -9,7 +9,7 @@ import Animated from 'react-native-reanimated'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import HTML from 'react-native-render-html'
 
-export const SHEET_HEIGHT = 112 + 42 + 10
+export const SHEET_HEIGHT = 175.2
 
 const styles = StyleSheet.create({
   sheet: {
@@ -43,7 +43,10 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     padding: 20,
+    paddingTop: 10,
+    paddingRight: 10,
     minHeight: SHEET_HEIGHT,
+    elevation: 2,
   },
   content: {
     backgroundColor: '#fff',
@@ -67,7 +70,7 @@ const styles = StyleSheet.create({
     borderRadius: 21,
     paddingLeft: 12,
     paddingRight: 12,
-    backgroundColor: '#009688',
+    backgroundColor: '#D71440',
     
   },
   actions: {
@@ -81,6 +84,8 @@ const styles = StyleSheet.create({
   titleContainer: {
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start'
   }
 })
 
@@ -114,78 +119,113 @@ const requestData = async ({ name, lat, lng }, callback) => {
 const filteredClasses = ['bar', 'place']
 
 export default ({ location, onClose, setRoute, route }) => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [details, setDetails] = useState(null)
   const [headerHeight, setHeaderHeight] = useState(SHEET_HEIGHT)
+  const [callbackNode] = useState(new Animated.Value(1))
 
   const sheetRef = useRef()
-  const callbackNode = useRef(new Animated.Value(1))
+  const opacityNode = Animated.interpolate(callbackNode, {
+    inputRange: [0, 1],
+    outputRange: [BAR_HEIGHT, 0],
+  })
 
-  useEffect(() => {
+  const radiusNode = Animated.interpolate(callbackNode, {
+    inputRange: [0, 1],
+    outputRange: [0, 10]
+  })
+
+  // https://github.com/osdnk/react-native-reanimated-bottom-sheet/issues/51
+  useLayoutEffect(() => {
+    sheetRef.current && sheetRef.current.snapTo(0)
+  }, [])
+
+  useLayoutEffect(() => {
     if (location) {
-      sheetRef.current && sheetRef.current.snapTo(1)
+      sheetRef.current && sheetRef.current.snapTo(0)
       setDetails(null)
-      setLoading(true)
+      setLoading(true)  
+      
       requestData(location, (details) => {
         setLoading(false)
         setDetails(details)
-
-
       })
     }
   }, [location])
 
   const handleClose = useCallback(() => {
-    sheetRef.current && sheetRef.current.snapTo(0)
-    setDetails(null)
-    setLoading(true)
+    setLoading(false)
     onClose()
+
+    sheetRef.current && sheetRef.current.snapTo(0)
   })
   
   const handleLayout = useCallback((e) => {
-    setHeaderHeight(e.nativeEvent.layout.height)
-    if (!loading && location) {
-
-      sheetRef.current && sheetRef.current.snapTo(1)
+    if (headerHeight !== e.nativeEvent.layout.height) {
+      setHeaderHeight(e.nativeEvent.layout.height)
+      sheetRef.current && sheetRef.current.snapTo(0)
     }
-  }, [location, loading])
+  }, [headerHeight])
 
   const { name, lat, lng } = location || {}
+  const snapPoints = [BAR_HEIGHT + ((location || loading) ? headerHeight : 0), Dimensions.get("window").height + BAR_HEIGHT - 22] 
 
   return (
     <View style={styles.sheet} pointerEvents="box-none">
       <BottomSheet
-        snapPoints={[BAR_HEIGHT, BAR_HEIGHT + headerHeight, Dimensions.get("window").height + BAR_HEIGHT - 22]}
+        snapPoints={snapPoints}
         ref={sheetRef}
-        initialSnap={0}
-        callbackNode={callbackNode.current}
+        initialSnap={1}
+        callbackNode={callbackNode}
         overdragResistanceFactor={10}
         enabledGestureInteraction={!!location && !loading}
         renderHeader={() => {
           return (
             <View>
-              <BusBar setRoute={setRoute} route={route} />
-              <View style={styles.header} onLayout={handleLayout}>
+              <Animated.View style={{ translateY: opacityNode }}>
+                <BusBar setRoute={setRoute} route={route} />
+              </Animated.View>
+              <Animated.View
+                style={[
+                  styles.header,
+                  {
+                    borderTopLeftRadius: radiusNode,
+                    borderTopRightRadius: radiusNode,
+                  }
+                ]}
+                onLayout={handleLayout}
+              >
                 <View
                   style={styles.titleContainer}
                 >
                   <Text style={styles.heading}>
                     {(details && details.title) || name}
                   </Text>
-                  <TouchableNativeFeedback
-                    onPress={handleClose}
+                  <View
+                    style={{
+                      overflow: 'hidden',
+                      borderRadius: 100,
+                      opacity: location ? 1 : 0
+                    }}
                   >
-                    <View>
-                      <Icon
-                        name="close"
-                        size={32}
-                      />
-                    </View>
-                  </TouchableNativeFeedback>
+                    <TouchableNativeFeedback
+                      onPress={handleClose}
+                      style={{
+                        padding: 10,
+                      }}
+                    >
+                      <View>
+                        <Icon
+                          name="close"
+                          size={32}
+                        />
+                      </View>
+                    </TouchableNativeFeedback>
+                  </View>
                 </View>
                 {loading && (
                   <View style={styles.loading}>
-                    <ActivityIndicator size="small" />
+                    <ActivityIndicator size="small" color="#D71440" />
                     <Text style={styles.loadingText}>Loading details</Text>
                   </View>
                 )}
@@ -214,13 +254,13 @@ export default ({ location, onClose, setRoute, route }) => {
                   </Fragment>
                 )}
                 
-              </View>
+              </Animated.View>
             </View>
           )
         }}
         renderContent={() => {
           return (
-            <View style={styles.content}>
+            <Animated.View style={styles.header}>
               {!!details && (
                 <View>
                   <HTML
@@ -273,7 +313,7 @@ export default ({ location, onClose, setRoute, route }) => {
                   />
                 </View>
               )}
-            </View>
+            </Animated.View>
           )
         }}
       />

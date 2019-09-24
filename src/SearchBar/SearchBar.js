@@ -116,6 +116,7 @@ export default ({ onLocationSelect }) => {
         <TextInput
           placeholder="Search..."
           value={query}
+          selectionColor="#D71440"
           onChangeText={handleText}
           style={styles.text}
           ref={inputRef}
@@ -125,7 +126,7 @@ export default ({ onLocationSelect }) => {
           <ActivityIndicator
             style={styles.icon}
             size={26}
-            style={styles.icon}
+            color="#D71440"
           />
         )}
         <TouchableNativeFeedback

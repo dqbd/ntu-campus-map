@@ -12,10 +12,12 @@ import { BusRouteMarkers } from './BusRouteMarkers'
 const ACCESS_TOKEN = 'pk.eyJ1IjoiZGVsb2xkIiwiYSI6ImNpdDh2bTk3azAwMmIyenFkM2p0b2F4dHkifQ.aeKRzxbIUcSDVromSe-tHg'
 MapboxGL.setAccessToken(ACCESS_TOKEN);
 
+const wait = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+
 const styles = StyleSheet.create({
   mapContainer: {
     ...StyleSheet.absoluteFillObject,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   mapView: {
@@ -44,8 +46,8 @@ export default ({ location, route }) => {
   return (
     <Fragment>
       <BusMarkerProvider ref={shotRef} />
-      {mapReady ? (
-        <View style={styles.mapContainer}>
+      <View style={styles.mapContainer}>
+        {mapReady ? (
           <MapboxGL.MapView
             style={styles.mapView}
             styleURL={encodeURI(`https://raw.githubusercontent.com/delold/ntu-campus-map/f47ee4bcda3472935/style.json`)}
@@ -70,8 +72,10 @@ export default ({ location, route }) => {
               
             <MapboxGL.UserLocation />
           </MapboxGL.MapView>
-        </View>
-      ) : <ActivityIndicator size="large" />}
+        ) : (
+          <ActivityIndicator size="large" color="#D71440" />
+        )}
+      </View>
     </Fragment>
   )
 }
