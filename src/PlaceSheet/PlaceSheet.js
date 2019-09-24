@@ -118,7 +118,7 @@ const requestData = async ({ name, lat, lng }, callback) => {
 
 const filteredClasses = ['bar', 'place']
 
-export default ({ location, onClose, setRoute, route }) => {
+export default ({ location, onClose, setRoute, setProgress, progress, route }) => {
   const [loading, setLoading] = useState(false)
   const [details, setDetails] = useState(null)
   const [headerHeight, setHeaderHeight] = useState(SHEET_HEIGHT)
@@ -183,7 +183,12 @@ export default ({ location, onClose, setRoute, route }) => {
           return (
             <View>
               <Animated.View style={{ translateY: opacityNode }}>
-                <BusBar setRoute={setRoute} route={route} />
+                <BusBar
+                  setRoute={setRoute}
+                  route={route}
+                  setProgress={setProgress}
+                  progress={progress}
+                />
               </Animated.View>
               <Animated.View
                 style={[

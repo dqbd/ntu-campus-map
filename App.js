@@ -8,14 +8,15 @@ import NTUMap from './src/NTUMap/NTUMap'
 const App = () => {
   const [location, setLocation] = useState(null)
   const [route, setRoute] = useState(null)
+  const [progress, setProgress] = useState(true)
 
   const onSheetClose = useCallback(() => setLocation(null))
 
   return (
     <Fragment>
-      <NTUMap location={location} route={route} />
+      <NTUMap location={location} route={route} progress={progress} />
       <SearchBar onLocationSelect={setLocation} />
-      <PlaceSheet location={location} onClose={onSheetClose} route={route} setRoute={setRoute} />
+      <PlaceSheet location={location} onClose={onSheetClose} route={route} setRoute={setRoute} progress={progress} setProgress={setProgress} />
     </Fragment>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from 'react-native-vector-icons/MaterialIcons'
+import IconCommunity from 'react-native-vector-icons/MaterialCommunityIcons'
 import { StyleSheet, View } from 'react-native'
 import { LINES } from '../../constants'
 import { TouchableNativeFeedback } from 'react-native-gesture-handler'
@@ -22,37 +23,61 @@ const styles = StyleSheet.create({
     marginRight: 5,
   }
 })
-export default ({ setRoute, route }) => {
+
+const BusIcon = ({ name, ...props }) => {
+  const IconClass = IconCommunity.hasIcon(name) ? IconCommunity : Icon
+  return (
+    <IconClass
+      name={name}
+      {...props}
+    />
+  )
+}
+
+const BusButton = ({ color, onPress, icon, active }) => (
+  <Animated.View
+    style={styles.buttonWrap}
+  >
+    <TouchableNativeFeedback
+      onPress={onPress}
+    >
+      <View
+        style={{
+          padding: 10,
+          backgroundColor: !active ? "#fff" : color,
+        }}
+      >
+        <BusIcon
+          name={icon}
+          size={32}
+          style={{
+            color: active ? '#fff' : color,
+          }}
+        />
+      </View>
+    </TouchableNativeFeedback>
+  </Animated.View>
+)
+
+export default ({ setRoute, setProgress, progress, route }) => {
   return (
     <View style={styles.bus}>
-      {LINES.map((line, index) => {
-        const active = !!(route && route.value === line.value)
-        return (
-          <Animated.View
-            style={styles.buttonWrap}
-          >
-            <TouchableNativeFeedback
-              key={line.value}
-              onPress={() => setRoute(active ? null : line)}
-            >
-              <View
-                style={{
-                  padding: 10,
-                  backgroundColor: !active ? "#fff" : line.color,
-                }}
-              >
-                <Icon
-                  name="directions-bus"
-                  size={32}
-                  style={{
-                    color: active ? '#fff' : line.color,
-                  }}
-                />
-              </View>
-            </TouchableNativeFeedback>
-          </Animated.View>
-        )
-      })}
+      {LINES.map((line) => (
+        <BusButton
+          key={line.value}
+          color={line.color}
+          icon="directions-bus"
+          active={!!(route && route.value === line.value)}
+          onPress={() => setRoute(route && route.value === line.value ? null : line)}
+        />
+      ))}
+
+      <BusButton
+        color="#555"
+        icon={progress ? "eye" : "eye-off"}
+        onPress={() => setProgress(!progress)}
+      />
+      
     </View>
   )
 }

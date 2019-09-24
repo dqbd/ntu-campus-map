@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
 })
 
-export default ({ location, route }) => {
+export default ({ location, route, progress }) => {
   const [mapReady, setMapReady] = useState(false)
   const [pinIcon, setPinIcon] = useState(null)
   const [busIcons, setBusIcons] = useState({})
@@ -67,7 +67,7 @@ export default ({ location, route }) => {
               }}
             />
             
-            <BusRouteMarkers route={route} />
+            <BusRouteMarkers progress={progress} route={route} />
             <TargetMarker location={location} />
               
             <MapboxGL.UserLocation />
