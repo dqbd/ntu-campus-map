@@ -1,4 +1,4 @@
-package com.ntumapjs;
+package cz.duong.ntucampusmap;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

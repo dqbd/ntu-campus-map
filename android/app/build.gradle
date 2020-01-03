@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.ntumapjs"
+        applicationId "cz.duong.ntucampusmap"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

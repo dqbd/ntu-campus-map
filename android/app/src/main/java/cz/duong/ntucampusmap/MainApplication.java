@@ -1,4 +1,4 @@
-package com.ntumapjs;
+package cz.duong.ntucampusmap;
 
 import android.app.Application;
 import android.util.Log;
