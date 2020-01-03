@@ -71,12 +71,12 @@ export default ({ setRoute, setProgress, progress, route }) => {
           onPress={() => setRoute(route && route.value === line.value ? null : line)}
         />
       ))}
-
+{/* 
       <BusButton
         color="#555"
         icon={progress ? "eye" : "eye-off"}
         onPress={() => setProgress(!progress)}
-      />
+      /> */}
       
     </View>
   )

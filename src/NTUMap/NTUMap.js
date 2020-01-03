@@ -32,6 +32,7 @@ export default ({ location, route, progress }) => {
   const [busIcons, setBusIcons] = useState({})
 
   const shotRef = useRef()
+  const cameraRef = useRef()
 
   useLayoutEffect(() => {
     (async () => {
@@ -43,6 +44,13 @@ export default ({ location, route, progress }) => {
     })()
   }, [])
 
+  useLayoutEffect(() => {
+    if (location && cameraRef.current) {
+      const { lat, lng } = location
+      cameraRef.current.flyTo([lng, lat], 1000)
+    }
+  }, [location])
+
   return (
     <Fragment>
       <BusMarkerProvider ref={shotRef} />
@@ -50,10 +58,11 @@ export default ({ location, route, progress }) => {
         {mapReady ? (
           <MapboxGL.MapView
             style={styles.mapView}
-            styleURL={encodeURI(`https://raw.githubusercontent.com/delold/ntu-campus-map/f47ee4bcda3472935/style.json`)}
+            styleURL={encodeURI(
+              `https://raw.githubusercontent.com/delold/ntu-campus-map/f47ee4bcda3472935/style.json`,
+            )}
             compassEnabled={false}
-            minZoomLevel={1}
-          >
+            minZoomLevel={1}>
             <MapboxGL.Images
               images={{
                 pin: pinIcon,
@@ -65,11 +74,16 @@ export default ({ location, route, progress }) => {
                 centerCoordinate: [103.68450164794922, 1.3484472784360202],
                 zoomLevel: 14.5,
               }}
+              maxBounds={{
+                ne: [103.6820359, 1.1304753],
+                sw: [104.0120359, 1.4504753],
+              }}
+              ref={cameraRef}
             />
-            
+
             <BusRouteMarkers progress={progress} route={route} />
             <TargetMarker location={location} />
-              
+
             <MapboxGL.UserLocation />
           </MapboxGL.MapView>
         ) : (
@@ -77,5 +91,5 @@ export default ({ location, route, progress }) => {
         )}
       </View>
     </Fragment>
-  )
+  );
 }
