@@ -6,7 +6,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "fetch-cookie": "^0.7.3",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "open": "^6.4.0",
     "tough-cookie": "^3.0.1"
   }
